@@ -4,7 +4,7 @@ public class MenorIdade extends Cadastro{
 	
 	private boolean acompanhante;
 
-	public MenorIdade(String titular, int numero, int idade, float saldo) {
+	public MenorIdade(String titular, int numero, int idade, float saldo, boolean acompanhante) {
 		super(titular, numero, idade, saldo);
 		this.acompanhante = acompanhante;
 	}
@@ -25,11 +25,11 @@ public class MenorIdade extends Cadastro{
 		}
 		
 		if (this.acompanhante) {
-			System.out.println("Sua compra foi efetuada com sucesso, com a taxa de 20 reais do acompanhante. Divirta-se!");
+			System.out.println("Sua compra foi efetuada com sucesso, com a taxa de 20 reais do acompanhante.");
 			this.setSaldo(this.getSaldo() - valor);
 			return true;
 		} else {
-			System.out.println("Sua compra foi efetuada com sucesso. Divirta-se!");
+			System.out.println("Sua compra foi efetuada com sucesso.");
 			this.setSaldo(this.getSaldo() - valor);
 			return true;
 		}

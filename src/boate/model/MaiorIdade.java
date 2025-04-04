@@ -4,7 +4,7 @@ public class MaiorIdade extends Cadastro{
 	
 	private boolean camarote = false;
 
-	public MaiorIdade(String titular, int numero, int idade, float saldo) {
+	public MaiorIdade(String titular, int numero, int idade, float saldo, boolean camarote) {
 		super(titular, numero, idade, saldo);
 		this.camarote = camarote;	
 	}
@@ -26,12 +26,12 @@ public class MaiorIdade extends Cadastro{
 		}
 		
 		if (this.camarote) {
-			System.out.println("Compra Ingresso Camarote fetuada com sucesso. Divirta-se!");
+			System.out.println("Compra Ingresso Camarote efetuada com sucesso.");
 			this.setSaldo(this.getSaldo() - valor);
 			return true;
 			
 		} else {
-			System.out.println("Compra Ingresso Pista efetuada com sucesso. Divirta-se!");
+			System.out.println("Compra Ingresso Pista efetuada com sucesso.");
 			this.setSaldo(this.getSaldo() - valor);
 			return true;
 		}
